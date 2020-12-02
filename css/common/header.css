@@ -1,0 +1,513 @@
+/* header大區塊設定 */
+
+.header{
+  width: 100%;
+  /* 先調高一點 */
+  height: 45px;
+  position: fixed;
+  /* 下滾消失，上滾出現體驗不佳，先從-40px改成0，讓他固定在上方就好 */
+  top: 0px;
+  z-index: 5;
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,.1);
+  transition: .8s;
+}
+
+
+.header.on{
+  top: 0;
+}
+
+.background_header{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../image/pattern_2.jpg);
+  opacity: .9;
+}
+
+.content_header{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px){
+  .header{
+    height: 85px;
+    top: 0px;
+  }
+  .content_header{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .content_header{
+    width: 1000px;
+  }
+}
+
+/* logo區 */
+
+.logo_header{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 80px;
+}
+
+.logo_header img{
+  width: 100%;
+}
+
+.shopping_cart{
+  width: 24px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.shopping_cart img{
+  width: 100%;
+}
+
+.icons_header{
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  -moz-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition: transform 0.1s ease 0.5s, opacity 0.1s ease 0s;
+  visibility: hidden;
+}
+
+.icons_header a{
+  display: inline-block;
+  width: 30px;
+}
+
+.fb_header, .ig_header{
+  margin-right: 10px;
+}
+
+.icons_header img{
+  width: 100%;
+}
+
+@media screen and (min-width: 576px){
+  .logo_header:hover{
+    opacity: .8;
+  }
+  .icons_header a:hover{
+    opacity: .8;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .logo_header{
+    top: 10%;
+    left: 0;
+    -moz-transform: translate(0);
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    width: 150px;
+  }
+  .shopping_cart{
+    display: none;
+  }
+  .icons_header{
+    visibility: visible;
+  }
+}
+
+/* 主選單區 */
+
+.main_menu{
+  width: 60%;
+  position: absolute;
+  display: none;
+  top: 15px;
+  right: 0;
+}
+
+.main_ul{
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.main_li{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mm_4{
+  margin-left: 45px;
+}
+
+.mm_1, .mm_2, .mm_3, .mm_5, .mm_6, .mm_7{
+  margin-left: 20px;
+}
+
+.mm_1{
+  margin-right: 0;
+}
+
+.main_link{
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 23px;
+  height: 70px;
+}
+
+.main_link img{
+  position: absolute;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.arrow_brown{
+  visibility: hidden;
+}
+
+.main_text{
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-align: center;
+  transition: .8s;
+}
+
+.main_text span{
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: #333333;
+  writing-mode: vertical-lr;
+  margin: 0 auto;
+  display: block;
+}
+
+.main_li.active span{
+  color: #963200;
+}
+
+.top_word{
+  opacity: 0;
+  transition: opacity 0.2s ease 0s;
+}
+
+.main_text span:first-child{
+  margin-bottom: 12px;
+}
+
+
+@media screen and (min-width: 768px){
+  .main_menu{
+    display: inline-block;
+  }
+}
+
+
+/* hover header選單效果 */
+/* hover header選單效果 */
+
+
+@media screen and (min-width: 376px){
+  .header:hover .background_header{
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .header:hover{
+    height: 140px;
+  }
+  .header:hover  .icons_header{
+    -moz-transform: translateY(-170%);
+    -webkit-transform: translateY(-170%);
+    transform: translateY(-170%);
+    opacity: 1;
+    transition: transform 0.1s ease 0s, opacity 0.05s ease 0.5s;
+  }
+  .header:hover .main_text{
+    top: 23px;
+  }
+  .header:hover .top_word{
+    opacity: 1;
+    transition: opacity 0.3s ease .4s;
+  }
+}
+
+
+/* hover 主選單 選單效果 */
+/* hover 主選單 選單效果 */
+
+
+.main_link:hover span{
+  color: #963200;
+}
+
+.main_link:hover img:first-child{
+  visibility: hidden;
+}
+
+.main_link:hover .arrow_brown{
+  visibility: visible;
+}
+
+
+/* 漢堡包 */
+/* 漢堡包 */
+/* 漢堡包 */
+
+
+/* 漢堡包icon(待設定) */
+
+.hamburger_box{
+  width: 28px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.hamburger_line{
+  display: none;
+  width: 100%;
+  height: 4px;
+  background-color: #555555;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.hamburger_line.is-active{
+  display: block;
+}
+
+.hamburger_line::after, .hamburger_line::before{
+  display: block;
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  background-color: #555555;
+}
+
+.hamburger_line::after{
+  left: 0;
+  top: 8px;
+}
+
+.hamburger_line::before{
+  left: 0;
+  top: -8px;
+}
+
+.hamburger_cross{
+  display: none;
+  font-size: 34px;
+  color: #555555;
+  font-weight: 700;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hamburger_cross.is-active{
+  display: block;
+}
+
+.hamburger_box:hover .hamburger_line,
+.hamburger_box:hover .hamburger_line::after,
+.hamburger_box:hover .hamburger_line::before{
+  background-color: #999999;
+}
+
+.hamburger_box:hover .hamburger_cross{
+  color: #999999;
+}
+
+
+@media screen and (min-width: 768px){
+  .hamburger_box{
+    visibility: hidden;
+  }
+}
+
+/* 漢堡包大設定 出現 消失 */
+
+.ham_menu{
+  position: fixed;
+  top: -110%;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../image/pattern_2.jpg);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,.1);
+}
+
+.ham_menu.is-active{
+  top: 0;
+}
+
+@media screen and (min-width: 376px){
+  .ham_menu{
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 576px){
+  .ham_menu{
+    flex-direction: row;
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .ham_menu{
+    visibility: hidden;
+  }
+}
+
+/* 漢堡包選單兩塊ul */
+
+.ham_ul{
+  text-align: center;
+  padding: 15% 0;
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  flex-direction: row-reverse; 
+  justify-content: space-around;
+  
+}
+
+.ham_ul:nth-child(2){
+  border-top: 1px dashed gray;
+}
+
+@media screen and (min-width: 376px){
+  .ham_ul{
+    width: 180px;
+    padding: 36px 0;
+  }
+}
+
+@media screen and (min-width: 576px){
+  .ham_ul{
+    width: 180px;
+    margin: 25px 0 0 20px;
+    padding: 0;
+  }
+  .ham_ul:nth-child(1){
+    order: 2;
+  }
+  .ham_ul:nth-child(2){
+    margin: 25px 0 0 0;
+    order: 1;
+    border: none;
+  }
+}
+
+/* 漢堡包ul內的li */
+
+.ham_li{
+  list-style: none;
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: top;
+  margin: 0;
+  opacity: 0;
+}
+
+.hm_1.is-active, .hm_5.is-active{
+  opacity: 1;
+  transition: opacity 1s ease 0s;
+}
+
+.hm_2.is-active, .hm_6.is-active{
+  opacity: 1;
+  transition: opacity 1s ease 0.1s;
+}
+
+.hm_3.is-active, .hm_7.is-active{
+  opacity: 1;
+  transition: opacity 1s ease 0.2s;
+}
+
+.hm_4.is-active, .hm_8.is-active{
+  opacity: 1;
+  transition: opacity 1s ease 0.3s;
+}
+
+.ham_link{
+  text-decoration: none;
+  display: inline-block;
+}
+
+.ham_link span{
+  display: block;
+  writing-mode: vertical-lr;
+  font-size: 16px;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+}
+
+.ham_li.active span{
+  color: #963200;
+}
+
+.ham_link span:last-child{
+  margin-top: 12px;
+}
+
+
+/* 首頁header效果區 */
+
+@media screen and (min-width: 768px){
+  .header.hidden{
+    top: -85px;
+  }
+}
+
+
+

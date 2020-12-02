@@ -1,0 +1,185 @@
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+}
+
+html, body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url(../../image/pattern_2.jpg);
+  font-size: 0;
+  font-weight: 300;
+  font-family: 'Roboto','Noto Sans TC', sans-serif;
+}
+
+.total{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* 通用文字設定 */
+
+h2.row{
+  font-family: 'Roboto', 'Noto Serif TC', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  letter-spacing: 6px;
+}
+
+h3.row{
+  font-family: 'Roboto', 'Noto Serif TC', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  letter-spacing: 4px; 
+}
+
+h2.banner_h2{
+  font-family: 'Roboto', 'Noto Serif TC', serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 20px;
+  margin: 0;
+  vertical-align: top;
+}
+
+p.banner_english{
+  font-size: 12px;
+  margin: 0px 0 0 20px;
+  font-weight: 300;
+}
+
+p.banner_p{
+  font-size: 14px;
+  letter-spacing: 7px;
+  font-weight: 100;
+  line-height: 24px;
+  margin: 0;
+}
+
+p.text_18{
+  font-size: 18px;
+  color: #333333;
+  letter-spacing: 4px;
+  font-weight: 300;
+}
+
+p.text_14{
+  font-size: 14px;
+  color: #555555;
+  font-weight: 300;
+  letter-spacing: 0px;
+  line-height: 24px;
+}
+
+p.text_12{
+  font-size: 12px;
+  color: #555555;
+  font-weight: 300;
+  letter-spacing: 0px;
+  line-height: 20px;
+}
+
+p.english{
+  font-size: 12px;
+  margin: 0;
+  color: #555555;
+  font-weight: 300;
+}
+/* 內容區域設定 */
+.banner{
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content_total{
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 376px){
+  .content_total{
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 576px){
+  .content_total{
+    width: 80%;
+  }
+  .banner{
+    height: 100vh;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px){
+  p.text_14{
+    letter-spacing: 4px;
+  }
+}
+
+@media screen and (min-width: 992px){
+
+}
+
+@media screen and (min-width: 1200px){
+  .content_total{
+    width: 1000px;
+  }
+  .banner{
+    height: 100vh;
+    width: 1000px;
+  }
+}
+
+/* banner共通設置區 */
+
+.banner_content{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner_mask{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .5;
+  transition: .5s;
+}
+
+.banner_mask.on{
+  opacity: 0;
+}
+
+.banner_text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  writing-mode: vertical-rl;
+  opacity: 1;
+  transition: .5s;
+}
+
+.banner_text.on{
+  opacity: 0;
+}
+
+

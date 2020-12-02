@@ -1,0 +1,716 @@
+/* 全部內容區塊設定 */
+/* 大區塊設定 */
+.content{
+  width: 100%;
+}
+
+.content:nth-child(2), .content:nth-child(3){
+  border-top: 1px dashed #999999;
+}
+
+/* 首屏 */
+
+.home{
+  width: 100%;
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 6%;
+}
+
+.home_top{
+  display: none;
+  width: 100%;
+  height: 120px;
+  position: relative;
+  border-left: 1px dashed #999999;
+  --animate-duration: 0s;
+}
+
+.logo_home_top{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 150px;
+}
+
+.icons_home_top{
+  display: inline-block;
+  position: absolute;
+  top: 50px;
+  right: 0;
+
+}
+
+.icons_home_top a{
+  display: inline-block;
+  width: 30px;
+}
+
+.fb_home_top,
+.ig_home_top{
+  margin-right: 10px;
+}
+
+.icons_home_top img{
+  width: 100%;
+}
+
+@media screen and (min-width: 576px){
+  .home_top{
+    --animate-duration: 2s;
+  }
+  .logo_home_top:hover,
+  .icons_home_top a:hover{
+    opacity: .8;
+  }
+}
+
+/* 大文字 */
+.home_word{
+  padding: 0 16px 16px;
+}
+
+.home_word_relative{
+  width: 100;
+}
+
+.home_title{
+  font-family: 'Noto Serif TC', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  letter-spacing: 2px;
+  margin: 0;
+  --animate-duration: 0s;
+  --animate-delay: 0s;
+}
+
+
+.title_992{
+  display: none;
+}
+
+.title_english{
+  --animate-duration: 0s;
+  --animate-delay: 0s;
+}
+
+.right_block{
+  width: 100%;
+}
+
+.home_product{
+  width: 100%;
+}
+
+.product_type{
+  width: 100%;
+  /* border: 1px solid green; */
+}
+
+.type{
+  display: block;
+  width: 100%;
+  height: 120px;
+  margin: 0 0 10px;
+  text-decoration: none;
+  box-shadow: 0 0 3px 0 #ccc;
+  transition: .3s;
+  opacity: 1;
+  --animate-duration: 0s;
+}
+
+.type_word{
+  margin: 16px;
+  padding: 3px 6px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 2px;
+}
+
+.cakeType{
+  background-image: url(../image/strawberry_cake_700x500.jpg);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.rollType{
+  background-image: url(../image/cake_roll_big2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pieType{
+    background-image: url(../image/pie_big.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.type h2{
+  margin: 0;
+}
+
+.beside_product{
+  display: none;
+  --animate-duration: 0s;
+}
+
+
+
+@media screen and (min-width: 376px){
+  .home_word{
+    display: block;
+    width: 20%;   
+    padding: 0;
+  }
+  .home_word_relative{
+    writing-mode: vertical-rl;
+  }
+  .home_title{
+    font-family: 'Noto Serif TC', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    letter-spacing: 6px;
+    margin: 0;
+  }
+  .right_block{
+    width: 78%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .type{
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width: 576px){
+  .type{
+    --animate-duration: 2s;
+  }
+  .type:hover{
+    opacity: .7 !important;
+  }
+  .home_title,
+  .title_english{
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+  }
+  .beside_product{
+    --animate-duration: 2s;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .home{
+    padding: 0;
+  }
+  .home_top{
+    display: block;
+  }
+  .home_title{
+    font-size: 28px;
+  }
+  .home_product{
+    width: 28%;
+  }
+  .beside_product{
+    display: block;
+    width: 70%;
+    padding-top: 50%;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .beside_product div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .home_big_image{
+    opacity: 0;
+    transition: .5s;
+  }
+  .home_big_image:first-child{
+    background-image: url(../image/strawberry_cake_700x500.jpg);
+    background-size: cover;
+  }
+  .home_big_image:nth-child(2){
+    background-image: url(../image/cake_roll_big.jpg);
+    background-size: cover;
+  }
+  .home_big_image:nth-child(3){
+    background-image: url(../image/pie_big.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .home_big_image.change{
+    opacity: 1;
+  }
+  .type{
+    height: 80px;
+  }
+  .type_h2{
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .home_title{
+    font-size: 36px;
+  }
+  .title_little{
+    display: none;
+  }
+  .title_992{
+    display: block;
+  }
+  .type_h2{
+    font-size: 24px !important;
+  }
+}
+
+/* 首頁首屏header包含小文字*/
+.index_header{
+  display:none;
+  position: relative;
+  width: 100%;
+  border-top: 1px dashed #999999;
+  margin-top: 20px;
+  height: 110px;
+  --animate-duration: 0s;
+}
+
+.home_introduction{
+  display: none;
+  margin-top: 20px;
+  position: absolute;
+  width: 40%;
+  top: 0;
+  left: 0;
+  /* border: 1px solid red; */
+}
+
+.home_introduction p{
+  margin: 0;
+}
+
+.index_menu{
+  position: absolute;
+  display: inline-block;
+  top: 15px;
+  right: 0;
+}
+
+.index_ul{
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.index_li{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.index_li.active p{
+  color: red;
+}
+
+.im_4{
+  margin-left: 45px;
+}
+
+.im_1, .im_2, .im_3, .im_5, .im_6, .im_7{
+  margin-left: 20px;
+}
+
+.im_1{
+  margin-right: 0;
+}
+
+.index_link{
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 23px;
+  height: 70px;
+}
+
+.index_link img{
+  position: absolute;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.index_arrow_brown{
+  visibility: hidden;
+}
+
+.index_text{
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-align: center;
+  transition: .8s;
+}
+
+.index_text span{
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: #333333;
+  writing-mode: vertical-lr;
+  margin: 0 auto;
+  display: block;
+}
+
+.index_text span:first-child{
+  margin-bottom: 12px;
+}
+
+.index_link:hover span{
+  color: #963200;
+}
+
+.index_link:hover img:first-child{
+  visibility: hidden;
+}
+
+.index_link:hover .index_arrow_brown{
+  visibility: visible;
+}
+
+.index_li.change span{
+  color: #963200;
+  font-weight: 700;
+}
+
+.index_li.change img:first-child{
+  visibility: hidden;
+}
+
+.index_li.change .index_arrow_brown{
+  visibility: visible;
+}
+@media screen and (min-width: 576px){
+  .index_header{
+    --animate-duration: 2s;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .index_header{
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .home_introduction{
+    display: block;
+  }
+}
+
+
+/* 最新消息*/
+
+.content_1{
+  width: 100%;
+  margin-bottom: 8%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.content_1_1{
+  width: 90%;
+  position: relative;
+  margin: 3% 0;
+}
+
+.title_1{
+  margin: 0;
+}
+
+.see_more{
+  position: absolute;
+  font-size: 14px;
+  text-decoration: none;
+  color: #963200;
+  bottom: 0;
+  right: 0;
+}
+
+.news_block{
+  /* border: 1px solid red; */
+  overflow: visible !important;
+}
+
+.news{
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, .5);
+  box-shadow: 0 0 3px 0 #ccc;
+  width: 100%;
+  margin-bottom: 3px;
+}
+
+/* 貓頭鷹套件要看到鄰居加上padding，但要讓第一個物件置左加上的 */
+.owl-stage {
+  left: -10%;
+}
+
+.news img{
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+.news_title{
+  margin: 6px 0;
+  text-align: center;
+  letter-spacing: 0 !important;
+}
+
+.news_text{
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+
+@media screen and (min-width: 376px){
+  .content_1_1{
+    width: 100%;
+  }
+  .owl-stage {
+    left: -80px;
+  }
+}
+
+@media screen and (min-width: 576px){
+  .owl-stage {
+    left: -30px;
+  }
+  .see_more:hover{
+    color: #da5000;
+  }
+  .news:hover{
+    -moz-transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+  }
+  .news:hover img{
+    opacity: 0.8;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .content_1{
+    margin-bottom: 4%;
+  }
+  .owl-stage {
+    left: -0px;
+  }
+}
+
+/* 幸福主打 */
+
+.content_2{
+  width: 100%;
+  margin-bottom: 8%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.content_2_1{
+  width: 90%;
+  position: relative;
+  margin: 3% 0;
+}
+
+.title_2{
+  margin: 0;
+}
+
+@media screen and (min-width: 376px){
+  .content_2_1{
+    width: 100%;
+  }
+}
+
+/* 主要主打商品 */
+
+.top_product_block{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product{
+  display: block;
+  width: 90%;
+  text-decoration: none;
+  margin-bottom: 5%;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, .5);
+  box-shadow: 0 0 3px 0 #ccc;
+}
+
+.a_few_left .few{
+  display: block;
+}
+
+.product_image{
+  width: 100%;
+  position: relative;
+  padding-top: 100%;
+}
+
+.product_image img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.few{
+  font-size: 10px;
+  color: black;
+  margin: 0;
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, .7);
+  padding: 0px 6px;
+  margin: 6px;
+  border-radius: 4px;
+}
+
+.product_information{
+  width: 90%;
+  margin: 6px auto;
+}
+
+.product_name{
+  font-size: 14px;
+  margin: 0;
+  color: #963200;
+  font-weight: 400;
+}
+
+.product_price{
+  font-size: 12px;
+  margin: 0 0 3px;
+  color: #333333;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.product_text{
+  font-size: 12px;
+  color: #555555;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media screen and (min-width: 376px){
+  .top_product_block{
+    justify-content: space-between;
+  }
+  .product{
+    width: 48%;
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (min-width: 576px){
+  .product:hover{
+    -moz-transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+  }
+  .product:hover img{
+    opacity: .8;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .product{
+    width: 32%;
+  }
+}
+
+/* 次要主打商品區 */
+.minor_product_block{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 1px dashed #999999;
+  padding: 3% 0 0;
+}
+
+.minor_product{
+  display: block;
+  width: 48%;
+  text-decoration: none;
+  margin-bottom: 5%;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, .5);
+  box-shadow: 0 0 3px 0 #ccc;
+}
+
+@media screen and (min-width: 576px){
+  .minor_product{
+    width: 32%;
+  }
+  .minor_product:hover{
+    -moz-transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+  }
+  .minor_product:hover img{
+    opacity: 0.8;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .minor_product{
+    width: 24%;
+  }
+}
+

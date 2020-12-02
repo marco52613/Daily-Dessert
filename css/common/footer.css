@@ -1,0 +1,135 @@
+/* footer大範圍設定 */
+
+.footer{
+  width: 100%;
+  /* min-width: 600px; */
+  height: 300px;
+  background-color: #dbdbdb;
+}
+
+.content_footer{
+  height: 100%;
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 376px){
+
+}
+
+@media screen and (min-width: 576px){
+  .footer{
+    height: 380px;
+  }
+  .content_footer{
+    text-align: left;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px){
+
+}
+
+@media screen and (min-width: 992px){
+
+}
+
+@media screen and (min-width: 1200px){
+  .content_footer{
+    width: 1000px;
+  }
+}
+
+/* 左欄 */
+
+.contact_footer{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo_footer{
+  display: inline-block;
+  width: 120px;
+}
+
+.logo_footer img{
+  width: 100%;
+}
+
+.icons_footer a{
+  display: inline-block;
+  width: 25px;
+  margin: 10px 0;
+}
+
+.icons_footer a:nth-child(2){
+  margin-left: 10px;
+}
+
+.icons_footer img{
+  width: 100%;
+}
+
+.contact_footer p{
+  font-size: 10px;
+  font-weight: 300;
+  color: #333333;
+  margin: 10px 0;
+}
+
+
+@media screen and (min-width: 576px){
+  .logo_footer{
+    width: 150px;
+  }
+  .icons_footer a{
+    width: 30px;
+  }
+  .contact_footer p{
+    font-size: 14px;
+  }
+  .logo_footer:hover{
+    opacity: .8;
+  }
+  .icons_footer a:hover{
+    opacity: .8;
+  }
+}
+
+/* 右欄 */
+
+.big_word_footer{
+  writing-mode: vertical-rl;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  visibility: hidden;
+}
+
+.big_word_footer span{
+  font-family: 'Noto Serif TC', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #333333;
+  letter-spacing: .5rem;
+  display: block;
+  border-right: 1px solid #999999;
+}
+
+.big_word_footer span:last-child{
+  border-left: 1px solid #999999;
+}
+
+@media screen and (min-width: 576px){
+  .big_word_footer{
+    visibility: visible;
+  }
+}
+
+

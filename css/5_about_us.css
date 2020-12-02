@@ -1,0 +1,277 @@
+/* 全部內容區塊設定 */
+/* 大區塊設定 */
+.content{
+  width: 100%;
+}
+
+.content:nth-child(3), .content:nth-child(4){
+  border-top: 1px dashed #999999;
+}
+
+/* banner */
+
+.banner{
+  /* border: 1px solid red; */
+
+  background-image: url("../image/about_1000x600.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.banner_h2,
+.banner_p{
+  color: white;
+}
+
+.banner_english{
+  color: rgba(255, 255, 255, .7);
+}
+
+/* 內容1*/
+
+.content_1{
+  width: 100%;
+  margin-bottom: 8%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content_1_1{
+  width: 100%;
+
+}
+
+.title{
+  margin: 3% 0 0;
+  text-align: center;
+}
+
+.english{
+  margin: 0 0 3%;
+  text-align: center;
+}
+
+.brand_text{
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  line-height: 24px;
+}
+
+.brand_text span{
+  color: #963200;
+}
+
+.content_1_1_img{
+  width: 50%;
+  display: none;
+  background-image: url(../image/strawberry_cake_700x500.jpg);
+  background-size: cover;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 576px){
+  .brand_text{
+    letter-spacing: 2px !important;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .content_1_1{
+    writing-mode: vertical-rl;
+    width: 50%;
+    order: 2;
+    height: 270px;
+  }
+  .title,.english, .brand_text{
+    width: auto;
+    margin: 0;
+    vertical-align: top;
+    text-align: left;
+  }
+  .title{
+    line-height: 20px;
+  }
+  .english{
+    margin: 0 0 0 14px !important;
+  }
+  .content_1_1_img{
+    display: block;
+  }
+  .brand_text{
+    margin: 0 20px;
+    letter-spacing: 4px !important;
+    line-height: 30px !important;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .content_1{
+    margin-bottom: 4%;
+  }
+}
+
+
+/* 標題 */
+/* .content_h2跟.title同上 */
+
+.content_2{
+  width: 100%;
+  margin-bottom: 8%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content_2_1{
+  width: 100%;
+}
+
+.ingredients_text{
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  line-height: 24px;
+}
+
+.content_2_1_img{
+  width: 50%;
+  display: none;
+  background-image: url(../image/about_us_1000x600.jpg);
+  background-size: cover;
+}
+
+.content_2_2{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ingredients{
+  width: 90%;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ingredient_name{
+  width: 100%;
+  text-align: center;
+  margin: 0 0 14px;
+}
+
+.ingredients_image{
+  width: 100%;
+}
+
+.ingredients_image img{
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.ingredient_mask{
+  width: 100%;
+}
+
+.ingredient_inner_text{
+  width: 70%;
+  margin: 14px auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 376px){
+  .ingredients{
+    max-width: 280px;
+  }
+  .ingredients_image{
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .ingredients_image img{
+    width: 100%;
+  }
+  .ingredient_mask{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    transition: .5s;
+  }
+  .ingredient_inner_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white !important;
+  }
+  .ingredients_image:hover .ingredient_mask{
+    top: 0%;
+  }
+}
+
+@media screen and (min-width: 576px){
+  .content_2_2{
+    justify-content: space-between;
+  }
+  .ingredients{
+    width: 45%;
+  }
+  .ingredients_text{
+    letter-spacing: 2px !important;
+  }
+}
+
+
+@media screen and (min-width: 768px){
+  .content_2_1{
+    writing-mode: vertical-rl;
+    margin-top: 3%;
+    width: 50%;
+    height: 240px;
+    order: 2;
+
+  }
+  .ingredients_text{
+    width: auto;
+    margin: 0 20px;
+    vertical-align: top;
+    text-align: left;
+    letter-spacing: 4px !important;
+    line-height: 30px !important;
+  }
+  .content_2_1_img{
+    display: block;
+    margin-top: 3%;
+    order: 1;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .ingredients{
+    width: 30%;
+  }
+  .content_2_2{
+    order: 3;
+    margin-top: 6%;
+  }
+  .ingredient_name{
+    order: 2;
+  }
+  .ingredients_image{
+    order: 1;
+  }
+  .ingredient_name{
+    margin-top: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .content_2{
+    margin-bottom: 4%;
+  }
+}
